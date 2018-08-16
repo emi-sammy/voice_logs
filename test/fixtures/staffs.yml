@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  staff_num: MyString
+  staff_name: MyString
+  evaluation_cycle: 1
+
+two:
+  staff_num: MyString
+  staff_name: MyString
+  evaluation_cycle: 1

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  staff_num: MyString
+  evaluator_id: 1
+  year_month: 
+  contact_details: MyString
+  response_result: MyString
+  evaluator_comment: MyString
+  score: 1
+  rank: MyString
+  status: 1
+  item_one: 1
+  item_two: 1
+  item_three: 1
+  item_four: 1
+  item_five: 1
+
+two:
+  staff_num: MyString
+  evaluator_id: 1
+  year_month: 
+  contact_details: MyString
+  response_result: MyString
+  evaluator_comment: MyString
+  score: 1
+  rank: MyString
+  status: 1
+  item_one: 1
+  item_two: 1
+  item_three: 1
+  item_four: 1
+  item_five: 1

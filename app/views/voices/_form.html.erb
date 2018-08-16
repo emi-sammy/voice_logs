@@ -1,0 +1,87 @@
+<%= form_with(model: voice, local: true) do |form| %>
+  <% if voice.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(voice.errors.count, "error") %> prohibited this voice from being saved:</h2>
+
+      <ul>
+      <% voice.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :staff_num %>
+    <%= form.text_field :staff_num, id: :voice_staff_num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evaluator_id %>
+    <%= form.number_field :evaluator_id, id: :voice_evaluator_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_month %>
+    <%= form.text_field :year_month, id: :voice_year_month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_details %>
+    <%= form.text_field :contact_details, id: :voice_contact_details %>
+  </div>
+
+  <div class="field">
+    <%= form.label :response_result %>
+    <%= form.text_field :response_result, id: :voice_response_result %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evaluator_comment %>
+    <%= form.text_field :evaluator_comment, id: :voice_evaluator_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :score %>
+    <%= form.number_field :score, id: :voice_score %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rank %>
+    <%= form.text_field :rank, id: :voice_rank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status, id: :voice_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_one %>
+    <%= form.number_field :item_one, id: :voice_item_one %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_two %>
+    <%= form.number_field :item_two, id: :voice_item_two %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_three %>
+    <%= form.number_field :item_three, id: :voice_item_three %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_four %>
+    <%= form.number_field :item_four, id: :voice_item_four %>
+  </div>
+
+  <div class="field">
+    <%= form.label :item_five %>
+    <%= form.number_field :item_five, id: :voice_item_five %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
