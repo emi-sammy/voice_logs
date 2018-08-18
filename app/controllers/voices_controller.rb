@@ -18,6 +18,7 @@ class VoicesController < ApplicationController
   def create
     @voice = Voice.new(voice_params)
 
+
     respond_to do |format|
       if @voice.save
         format.html { redirect_to @voice, notice: 'Voice was successfully created.' }
