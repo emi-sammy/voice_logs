@@ -17,6 +17,7 @@
   <%= form.text_field :staff_num, id: :voice_staff_num %>
 </div>
 
+
 <div class="field">
   <%= form.label :evaluator_id %>
   <%= form.number_field :evaluator_id, id: :voice_evaluator_id %>
@@ -59,27 +60,29 @@
 
 <div class="field">
   <%= form.label :項番1 %>
-  <%= form.number_field :item_one, id: :voice_item_one %>
+  <%= form.select :item_one, [["○", "1"], ["✕", "０"]],:include_blank => true %>
+</div>
 </div>
 
 <div class="field">
   <%= form.label :項番2 %>
-  <%= form.number_field :item_two, id: :voice_item_two %>
+  <%= form.select :item_two, [["○", "1"], ["✕", "０"]],:include_blank => true %>
+</div>
 </div>
 
 <div class="field">
   <%= form.label :項番3 %>
-  <%= form.number_field :item_three, id: :voice_item_three %>
+  <%= form.select :item_three, [["○", "1"], ["✕", "０"]],:include_blank => true %>
 </div>
 
 <div class="field">
   <%= form.label :項番4 %>
-  <%= form.number_field :item_four, id: :voice_item_four %>
+  <%= form.select :item_four, [["○", "1"], ["✕", "０"]],:include_blank => true %>
 </div>
 
 <div class="field">
   <%= form.label :項番5 %>
-  <%= form.number_field :item_five, id: :voice_item_five %>
+  <%= form.select :item_five, [["○", "1"], ["✕", "０"]],:include_blank => true %>
 </div>
 
 <div class="actions">

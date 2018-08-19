@@ -1,2 +1,3 @@
 class Voice < ApplicationRecord
+
 end
