@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Staff num:</strong>
+  <%= @voice_check.staff_num %>
+</p>
+
+<p>
+  <strong>Evaluator:</strong>
+  <%= @voice_check.evaluator_id %>
+</p>
+
+<p>
+  <strong>Evaluator name:</strong>
+  <%= @voice_check.evaluator_name %>
+</p>
+
+<p>
+  <strong>Log date:</strong>
+  <%= @voice_check.log_date %>
+</p>
+
+<p>
+  <strong>Log time:</strong>
+  <%= @voice_check.log_time %>
+</p>
+
+<p>
+  <strong>Contact details:</strong>
+  <%= @voice_check.contact_details %>
+</p>
+
+<p>
+  <strong>Response result:</strong>
+  <%= @voice_check.response_result %>
+</p>
+
+<p>
+  <strong>Evaluator comment:</strong>
+  <%= @voice_check.evaluator_comment %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @voice_check.status %>
+</p>
+
+<p>
+  <strong>Customer miss:</strong>
+  <%= @voice_check.customer_miss %>
+</p>
+
+<p>
+  <strong>Business miss:</strong>
+  <%= @voice_check.business_miss %>
+</p>
+
+<p>
+  <strong>Compliance miss:</strong>
+  <%= @voice_check.compliance_miss %>
+</p>
+
+<%= link_to 'Edit', edit_voice_check_path(@voice_check) %> |
+<%= link_to 'Back', voice_checks_path %>

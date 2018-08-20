@@ -24,9 +24,25 @@
 </div>
 
 <div class="field">
+  <%= form.label :evaluator_name %>
+  <%= form.number_field :evaluator_name, id: :voice_evaluator_name %>
+</div>
+
+<div class="field">
   <%= form.label :評価月 %>
   <%= form.text_field :year_month, id: :voice_year_month %>
 </div>
+
+<div class="field">
+  <%= form.label :ログ月日 %>
+  <%= form.text_field :log_date, id: :voice_log_date %>
+</div>
+
+<div class="field">
+  <%= form.label :通話開始時間 %>
+  <%= form.text_field :log_time, id: :log_time %>
+</div>
+
 
 <div class="field">
   <%= form.label :問い合わせ内容 %>
@@ -83,6 +99,21 @@
 <div class="field">
   <%= form.label :項番5 %>
   <%= form.select :item_five, [["○", "1"], ["✕", "０"]],:include_blank => true %>
+</div>
+
+<div class="field">
+  <%= form.label :顧客の重大ミス %>
+  <%= form.select :customer_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %>
+</div>
+
+<div class="field">
+  <%= form.label :ビジネスの重大ミス %>
+  <%= form.select :business_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %>
+</div>
+
+<div class="field">
+  <%= form.label :コンプライアンスの重大ミス %>
+  <%= form.select :compliance_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %>
 </div>
 
 <div class="actions">

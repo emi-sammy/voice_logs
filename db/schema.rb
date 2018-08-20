@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180816055525) do
+ActiveRecord::Schema.define(version: 20180820152002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,23 @@ ActiveRecord::Schema.define(version: 20180816055525) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "voice_checks", force: :cascade do |t|
+    t.string "staff_num"
+    t.integer "evaluator_id"
+    t.string "evaluator_name"
+    t.date "log_date"
+    t.time "log_time"
+    t.text "contact_details"
+    t.text "response_result"
+    t.text "evaluator_comment"
+    t.string "status"
+    t.string "customer_miss"
+    t.string "business_miss"
+    t.string "compliance_miss"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "voices", force: :cascade do |t|
     t.string "staff_num"
     t.integer "evaluator_id"
@@ -59,6 +76,12 @@ ActiveRecord::Schema.define(version: 20180816055525) do
     t.integer "item_five"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "evaluator_name"
+    t.date "log_date"
+    t.time "log_time"
+    t.string "customer_miss"
+    t.string "business_miss"
+    t.string "compliance_miss"
   end
 
 end

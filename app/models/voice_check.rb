@@ -1,0 +1,2 @@
+class VoiceCheck < ApplicationRecord
+end

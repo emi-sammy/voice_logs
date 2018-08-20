@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Voice Checks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Staff num</th>
+      <th>Evaluator</th>
+      <th>Evaluator name</th>
+      <th>Log date</th>
+      <th>Log time</th>
+      <th>Contact details</th>
+      <th>Response result</th>
+      <th>Evaluator comment</th>
+      <th>Status</th>
+      <th>Customer miss</th>
+      <th>Business miss</th>
+      <th>Compliance miss</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @voice_checks.each do |voice_check| %>
+      <tr>
+        <td><%= voice_check.staff_num %></td>
+        <td><%= voice_check.evaluator_id %></td>
+        <td><%= voice_check.evaluator_name %></td>
+        <td><%= voice_check.log_date %></td>
+        <td><%= voice_check.log_time %></td>
+        <td><%= voice_check.contact_details %></td>
+        <td><%= voice_check.response_result %></td>
+        <td><%= voice_check.evaluator_comment %></td>
+        <td><%= voice_check.status %></td>
+        <td><%= voice_check.customer_miss %></td>
+        <td><%= voice_check.business_miss %></td>
+        <td><%= voice_check.compliance_miss %></td>
+        <td><%= link_to 'Show', voice_check %></td>
+        <td><%= link_to 'Edit', edit_voice_check_path(voice_check) %></td>
+        <td><%= link_to 'Destroy', voice_check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Voice Check', new_voice_check_path %>

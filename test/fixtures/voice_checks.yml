@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  staff_num: MyString
+  evaluator_id: 1
+  evaluator_name: MyString
+  log_date: 2018-08-21
+  log_time: 2018-08-21 00:20:02
+  contact_details: MyText
+  response_result: MyText
+  evaluator_comment: MyText
+  status: MyString
+  customer_miss: MyString
+  business_miss: MyString
+  compliance_miss: MyString
+
+two:
+  staff_num: MyString
+  evaluator_id: 1
+  evaluator_name: MyString
+  log_date: 2018-08-21
+  log_time: 2018-08-21 00:20:02
+  contact_details: MyText
+  response_result: MyText
+  evaluator_comment: MyText
+  status: MyString
+  customer_miss: MyString
+  business_miss: MyString
+  compliance_miss: MyString

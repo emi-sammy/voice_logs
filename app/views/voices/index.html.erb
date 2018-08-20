@@ -27,10 +27,15 @@
         <td><%= voice.staff_num %></td>
 
         <td><%= voice.evaluator_id %></td>
+        <td><%= voice.evaluator_name %></td>
         <td><%= voice.year_month %></td>
         <td><%= voice.score %></td>
         <td><%= voice.rank %></td>
         <td><%= voice.status %></td>
+
+        <td><%= voice.customer_miss %></td>
+        <td><%= voice.business_miss %></td>
+        <td><%= voice.compliance_miss %></td>
 
         <td><%= link_to 'Show', voice %></td>
         <td><%= link_to 'Edit', edit_voice_path(voice) %></td>
