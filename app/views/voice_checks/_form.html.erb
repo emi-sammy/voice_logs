@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :staff_num %>
+    <%= form.label :スタッフID %>
     <%= form.text_field :staff_num, id: :voice_check_staff_num %>
   </div>
 
@@ -22,53 +22,58 @@
   </div>
 
   <div class="field">
-    <%= form.label :evaluator_name %>
+    <%= form.label :評価者 %>
     <%= form.text_field :evaluator_name, id: :voice_check_evaluator_name %>
   </div>
 
   <div class="field">
-    <%= form.label :log_date %>
+    <%= form.label :通話開始月日 %>
     <%= form.text_field :log_date, id: :voice_check_log_date %>
+    <%= form.date_field :log_date, id: :voice_check_log_date %>
   </div>
 
   <div class="field">
-    <%= form.label :log_time %>
+    <%= form.label :通話開始時間 %>
     <%= form.time_select :log_time, id: :voice_check_log_time %>
   </div>
 
   <div class="field">
-    <%= form.label :contact_details %>
+    <%= form.label :お問い合わせ内容 %>
     <%= form.text_area :contact_details, id: :voice_check_contact_details %>
   </div>
 
   <div class="field">
-    <%= form.label :response_result %>
+    <%= form.label :応対結果 %>
     <%= form.text_area :response_result, id: :voice_check_response_result %>
   </div>
 
   <div class="field">
-    <%= form.label :evaluator_comment %>
+    <%= form.label :評価者コメント %>
     <%= form.text_area :evaluator_comment, id: :voice_check_evaluator_comment %>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
+    <%= form.label :ステータス %>
     <%= form.text_field :status, id: :voice_check_status %>
+    <%= form.select :status, [["作成中", "作成中"], ["確定", "確定"]] %>
   </div>
 
   <div class="field">
-    <%= form.label :customer_miss %>
+    <%= form.label :顧客の重大ミス %>
     <%= form.text_field :customer_miss, id: :voice_check_customer_miss %>
+    <%= form.select :customer_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %>
   </div>
 
   <div class="field">
-    <%= form.label :business_miss %>
+    <%= form.label :ビジネスの重大ミス %>
     <%= form.text_field :business_miss, id: :voice_check_business_miss %>
+    <%= form.select :business_miss, [["○", "✕"], ["✕", "✕"]],:include_blank => true %>
   </div>
 
   <div class="field">
-    <%= form.label :compliance_miss %>
+    <%= form.label :コンプライアンスの重大ミス %>
     <%= form.text_field :compliance_miss, id: :voice_check_compliance_miss %>
+    <%= form.select :compliance_miss, [["○", "✕"], ["✕", "✕"]],:include_blank => true %>
   </div>
 
   <div class="actions">

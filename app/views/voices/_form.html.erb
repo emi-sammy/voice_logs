@@ -31,11 +31,13 @@
 <div class="field">
   <%= form.label :評価月 %>
   <%= form.text_field :year_month, id: :voice_year_month %>
+  <%= form.date_field :year_month, id: :voice_year_month %>
 </div>
 
 <div class="field">
   <%= form.label :ログ月日 %>
   <%= form.text_field :log_date, id: :voice_log_date %>
+  <%= f.date_field: :log_date, id: :voice_log_date %>
 </div>
 
 <div class="field">
