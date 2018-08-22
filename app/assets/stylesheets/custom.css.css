@@ -1,0 +1,99 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #add8e6;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+}
+
+code {
+  font-size: 80%;
+}
+
+.navbar {
+  background-color: #add8e6;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+.table
+{
+  table-layout: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th
+{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td
+{
+  vertical-align: middle;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th
+{
+  width: 60px;
+}
+
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td
+{
+  width: 240px;
+}
+
+.table > thead > tr > th.warning,
+.table > tbody > tr > th.warning,
+.table > tfoot > tr > th.warning
+{
+  background-color: #bbdd00;
+}
+
+.table > thead > tr > td.warning,
+.table > tbody > tr > td.warning,
+.table > tfoot > tr > td.warning
+{
+  background-color: #eeffbb;
+}

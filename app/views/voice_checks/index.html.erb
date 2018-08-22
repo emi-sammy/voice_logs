@@ -1,16 +1,15 @@
 <h1>評価一覧</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>スタッフID</th>
+      <th>スタッフ名</th>
       <th>評価者id</th>
       <th>評価者</th>
       <th>通話開始月日</th>
       <th>通話開始時間</th>
-      <th>お問い合わせ内容</th>
-      <th>応対結果</th>
-      <th>評価者コメント</th>
       <th>ステータス</th>
       <th>顧客のミス</th>
       <th>ビジネスのミス</th>
@@ -21,27 +20,30 @@
 
   <tbody>
     <% @voice_checks.each do |voice_check| %>
+      <% staff_n = voice_check.staff_num %>
       <tr>
-        <td><%= voice_check.staff_num %></td>
+        <td><%= staff_n %></td>
+
         <td><%= voice_check.evaluator_id %></td>
         <td><%= voice_check.evaluator_name %></td>
         <td><%= voice_check.log_date %></td>
         <td><%= voice_check.log_time %></td>
-        <td><%= voice_check.contact_details %></td>
-        <td><%= voice_check.response_result %></td>
-        <td><%= voice_check.evaluator_comment %></td>
         <td><%= voice_check.status %></td>
         <td><%= voice_check.customer_miss %></td>
         <td><%= voice_check.business_miss %></td>
         <td><%= voice_check.compliance_miss %></td>
-        <td><%= link_to '詳細', voice_check %></td>
-        <td><%= link_to '編集', edit_voice_check_path(voice_check) %></td>
-        <td><%= link_to '削除', voice_check, method: :delete, data: { confirm: '削除しますか?' } %></td>
+        <td><button class="btn-success" type="submit"><%= link_to '詳細', voice_check %></button></td>
+        <td><button class="btn-info" type="submit"><%= link_to '編集', edit_voice_check_path(voice_check) %></button></td>
+        <td><button class="btn-danger" type="submit"><%= link_to '削除', voice_check, method: :delete, data: { confirm: '削除しますか?' } %></button></td>
+
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to '新規作成', new_voice_check_path %>
+
+
+
+  <td><button btn-lg class="btn-info btn-lg" type="submit"><%= link_to '新規作成', new_voice_check_path %></button></td>

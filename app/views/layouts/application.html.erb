@@ -9,25 +9,73 @@
   </head>
 
   <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ボイスログ評価システム</a>
+        </div>
 
-    <% if evaluator_signed_in? %>
-    ようこそ <strong><%= link_to current_evaluator.name, voice_checks_path(current_evaluator.id) %></strong> さん
-    <br>
-      <%= link_to "スタッフ一覧", staffs_path %>
-      <%= link_to "評価一覧", voice_checks_path %>
-      <%= link_to "ログアウト", destroy_evaluator_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "新規登録", new_evaluator_registration_path %>
-      <%= link_to "ログイン", new_evaluator_session_path %>
-    <% end %>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
 
-    <% if notice %>
-      <p class="alert alert-notice"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-error"><%= alert %></p>
-    <% end %>
+            <% if evaluator_signed_in? %>
+              <li><%= link_to "評価一覧", voice_checks_path %></li>
+              <li><%= link_to '新規作成', new_voice_check_path %></li>
+              <li><%= link_to 'スタッフ新規登録', new_staff_path %></li>
+              <li><%= link_to "スタッフ一覧", staffs_path %></li>
 
-    <%= yield %>
-  </body>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <span class="glyphicon glyphicon-log-out"><%= link_to "ログアウト", destroy_evaluator_session_path, method: :delete %></span></li>
+
+
+                <li>
+                  <span>ようこそ
+                    <strong><%= link_to current_evaluator.name, voice_checks_path(current_evaluator.id) %></strong>
+                    さん</span></li>
+              </ul>
+
+
+            <% else %>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <span class="glyphicon glyphicon-user"><%= link_to "新規登録", new_evaluator_registration_path %>
+                  </span>
+                </li>
+                <li>
+                  <span class="glyphicon glyphicon-log-in"><%= link_to "ログイン", new_evaluator_session_path %>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          <% end %>
+      </ul>
+    </div>
+  </nav>
+  <!--/.nav-collapse -->
+</div>
+</nav>
+<br>
+
+
+<%= yield %>
+
+<footer class="footer">
+<div class="container">
+  <p class="text-muted">NTT comCHEO 2018
+  </p>
+</div>
+</footer>
+</body>
 </html>

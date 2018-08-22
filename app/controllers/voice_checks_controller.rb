@@ -9,6 +9,7 @@ class VoiceChecksController < ApplicationController
 
 
   def show
+
   end
 
   def new
@@ -54,6 +55,9 @@ class VoiceChecksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+
 
   private
 
