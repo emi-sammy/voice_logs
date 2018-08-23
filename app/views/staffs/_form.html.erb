@@ -11,21 +11,34 @@
     </div>
   <% end %>
 
+  <br><br>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr>
+            <th class="info">    <%= form.label :スタッフID %></th>
+            <th class="info">    <%= form.label :スタッフ名 %></th>
+            <th class="info">  <%= form.label :評価サイクル %></th>
+      </tr>
+
+              <tr>
   <div class="field">
-    <%= form.label :スタッフID %>
-    <%= form.text_field :staff_num, id: :staff_staff_num %>
+
+  <th>  <%= form.text_field :staff_num, id: :staff_staff_num %></th>
   </div>
 
   <div class="field">
-    <%= form.label :スタッフ名 %>
-    <%= form.text_field :staff_name, id: :staff_staff_name %>
+
+  <th>  <%= form.text_field :staff_name, id: :staff_staff_name %></th>
   </div>
 
   <div class="field">
-    <%= form.label :評価サイクル %>
-    <%= form.number_field :evaluation_cycle, id: :staff_evaluation_cycle %>
+
+  <th>  <%= form.number_field :evaluation_cycle, id: :staff_evaluation_cycle %></th>
   </div>
 
+</table>
+</div>
+</tbody>
   <div class="actions">
     <%= form.submit %>
   </div>

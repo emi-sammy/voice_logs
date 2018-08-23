@@ -13,123 +13,108 @@
 <% end %>
 
 <div class="table-responsive">
-  <table class="table table-hover">
-    <div class="field">
-      <th>
-        <%= form.label :スタッフID %></th>
-      <td>
-        <%= form.text_field :staff_num, id: :voice_check_staff_num %></td>
+  <table class=table >
+    <tr>
+      <th class="info"><%= form.label :スタッフ番号 %></th>
+      <th class="info"><%= form.label :通話開始月日 %></th>
+      <th class="info"><%= form.label :評価者%></th>
+      <th class="info"><%= form.label :ステータス %></th>
+    </tr>
+    <div class="field" class="info">
+      <th><%= form.text_field :staff_num, id: :voice_check_staff_num %></th>
     </div>
 
-    <th>スタッフ名</th>
-    <td>
+    <div class="field">
+      <th><%= form.date_field :log_date, id: :voice_check_log_date %></th>
+      </div>
+
+      <div class="field">
+        <th><%= form.select :evaluator_name, [["及川 恵美", "及川 恵美"], ["品質 花子", "品質 花子"], ["品質 太郎", "品質 花子"]] %></th>
+      </div>
+
+      <div class="field">
+        <!--%= form.text_field :status, id: :voice_check_status %-->
+        <th>
+          <%= form.select :status, [["作成中", "作成中"], ["確定", "確定"]] %></th>
+      </div>
+    </table>
+  </div>
+
+  <!--%= form.label :評価者 %-->
+  <!--%= form.text_field :evaluator_name, id: :voice_check_evaluator_name %-->
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr>
+        <th class="info"><%= form.label :お問い合わせ内容 %></th>
+        <th class="info"><%= form.label :応対結果 %></th>
+      </tr>
+  <div class="field">
+        <th><%= form.text_area :contact_details, id: :voice_check_contact_details , :size=>"52"%></th>
+      </div>
+
       <div class="field">
         <th>
-          <%= form.label :evaluator_id %>
-        </th>
-        <td><%= form.number_field :evaluator_id, id: :voice_check_evaluator_id %></td>
-
+          <%= form.text_area :response_result, id: :voice_check_response_result , :size=>"52"%></th>
       </div>
-
-      <div class="field">
-        <th><%= form.label :評価者 %></th>
-        <!--%= form.text_field :evaluator_name, id: :voice_check_evaluator_name %-->
-        <td><%= link_to current_evaluator.name, voice_checks_path(current_evaluator.id) %></td>
-      </div>
-
     </table>
   </div>
 
   <div class="table-responsive">
-    <table class="table table-hover">
+    <table class="table table-bordered">
+      <tr>
+        <th class="info">ミス項目</th>
+        <th class="info">ポイント</th>
+        <th class="info">詳細</th>
+        <th class="info">評価</th>
+      </tr>
+
       <div class="field">
-        <th>
-          <%= form.label :通話開始月日 %>
-          <td><%= form.datetime_field :log_date, id: :voice_check_log_date %>
-          </div>
-
-          <div class="field">
-            <th>
-              <%= form.label :通話開始時間 %>
-            </th>
-            <td>
-      
-              <%= form.time_field :log_time, id: :voice_check_log_time %></td>
-          </div>
-
-          <div class="field">
-            <th>
-              <%= form.label :お問い合わせ内容 %></th>
-            <td>
-              <%= form.text_area :contact_details, id: :voice_check_contact_details %></td>
-          </div>
-
-          <div class="field">
-            <th>
-              <%= form.label :応対結果 %></th>
-            <td>
-              <%= form.text_area :response_result, id: :voice_check_response_result %></td>
-          </div>
-
-        </table>
+        <th><%= form.label :顧客の重大ミス %></th>
+        <td>お客さまのご要望に応えること<br>マナーをもって対応すること</td>
+        <td>・誤回答、誤案内、誤誘導がない
+          <br>・著しいマナー不足がない<br>
+        </td>
+        <!--%= form.text_field :customer_miss, id: :voice_check_customer_miss %-->
+        <th><%= form.select :customer_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></th>
       </div>
 
-      <table width="90%" class="eval_detail">
-        <tr>
-          <th width="20%">ミス項目</th>
-          <th width="10%">ポイント</th>
-          <th width="50%">詳細</th>
-          <th width="10%">評価</th>
-        </tr>
-
+      <tr>
         <div class="field">
-          <td><%= form.label :顧客の重大ミス %></td>
-          <td>お客さまに誠意を持って対応する</td>
-          <td>コンプライアンスを遵守している<br/>第一声で明るく爽やかな印象を与えている<br/></td>
-          <!--%= form.text_field :customer_miss, id: :voice_check_customer_miss %-->
-          <td><%= form.select :customer_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></td>
-        </div>
-
-        <tr>
-          <div class="field">
-            <td><%= form.label :ビジネスの重大ミス %></td>
-            <td>ビジネス損失がない</td>
-            <td>コンプライアンスを遵守している<br/>第一声で明るく爽やかな印象を与えている<br/></td>
+          <th><%= form.label :ビジネスの重大ミス %></th>
+          <td>収益に貢献すること<br>不必要なコストを発生させないこと<br/>
+            <td>・不必要に対応時間を長引かせない
+              <br>・業務損失、呼減につながる行為がない<br></td>
 
             <!--%= form.text_field :business_miss, id: :voice_check_business_miss %-->
-            <td>
-              <%= form.select :business_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></td>
+            <th>
+              <%= form.select :business_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></th>
           </div>
+        </tr>
+        <tr>
+          <div class="field">
+            <th><%= form.label :コンプライアンスの重大ミス %></th>
+            <td>個人情報を適切に取り扱うこと</td>
+            <td>・本人性確認を正しく履行している</td>
+            <!--%= form.text_field :compliance_miss, id: :voice_check_compliance_miss %-->
+            <th><%= form.select :compliance_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></th>
+          </tr>
+        </div>
+      </table>
 
+      <div class="table-responsive">
+        <table class="table ">
           <tr>
-            <div class="field">
-              <td><%= form.label :コンプライアンスの重大ミス %></td>
-              <td>コンプライアンスを遵守している</td>
-              <td>コンプライアンスを遵守している<br/>第一声で明るく爽やかな印象を与えている<br/></td>
-              <!--%= form.text_field :compliance_miss, id: :voice_check_compliance_miss %-->
-              <td><%= form.select :compliance_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></td>
-            </div>
-          </table>
-
-          <table width="100%" class="eval_detail">
-            <tr>
-              <th width="80%" align="left"><%= form.label :評価者コメント %></th>
-              <th width="20%" align="right"><%= form.label :ステータス %></th>
-            </tr>
-
-            <div class="field">
-              <td width="80%" align="left">
-                <%= form.text_area :evaluator_comment, id: :voice_check_evaluator_comment %></td>
-            </div>
-            <div class="field">
-              <!--%= form.text_field :status, id: :voice_check_status %-->
-              <td width="20%" align="right">
-                <%= form.select :status, [["作成中", "作成中"], ["確定", "確定"]] %></td>
-            </div>
-          </table>
-
-          <tr>
-            <div class="actions">
-              <%= form.submit %>
-            </div>
+            <th class="info"><%= form.label :評価者コメント %></th>
+             <th class="info">登録</th>
+          </tr>
+          <div class="field">
+            <th>
+              <%= form.text_area :evaluator_comment, id: :voice_check_evaluator_comment ,:size=>"50x5"%></th>
+          </div>
+          <div class="actions">
+        <th><%= form.submit %></th>
           <% end %>
+          </div>
+        </table>
+      </div>

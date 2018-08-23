@@ -1,4 +1,15 @@
-<h2>Sign up</h2>
+<style>
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="form-signin">
+    <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
@@ -33,3 +44,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+ </div>

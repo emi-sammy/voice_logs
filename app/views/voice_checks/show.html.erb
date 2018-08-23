@@ -1,62 +1,107 @@
-<p>
-  <strong>スタッフID</strong>
-  <%= @voice_check.staff_num %>
-</p>
+<br><br>
 
-<p>
-  <strong>評価者ID</strong>
-  <%= @voice_check.evaluator_id %>
-</p>
+<div class="table-responsive">
+    <table class="table table-bordered">
+    <tr>
+      <th class="info">スタッフ番号</th>
+      <th class="info">通話開始月日</th>
+      <th class="info">評価者</th>
+      <th class="info">ステータス</th>
+    </tr>
+    <div class="field" class="info">
+      <th> <%= @voice_check.staff_num %></th>
+    </div>
 
-<p>
-  <strong>評価者</strong>
-  <%= @voice_check.evaluator_name %>
-</p>
+    <div class="field">
+      <th>  <%= @voice_check.log_date %></th>
+      </div>
 
-<p>
-  <strong>通話開始月日</strong>
-  <%= @voice_check.log_date %>
-</p>
+      <div class="field">
+        <th>  <%= @voice_check.evaluator_name %></th>
+      </div>
 
-<p>
-  <strong>通話開始時間</strong>
-  <%= @voice_check.log_time %>
-</p>
+      <div class="field">
+        <!--%= form.text_field :status, id: :voice_check_status %-->
+        <th>  <%= @voice_check.status %></th>
+      </div>
+    </table>
+  </div>
 
-<p>
-  <strong>お問い合わせ内容</strong>
-  <%= @voice_check.contact_details %>
-</p>
+  <!--%= form.label :評価者 %-->
+  <!--%= form.text_field :evaluator_name, id: :voice_check_evaluator_name %-->
 
-<p>
-  <strong>応対結果</strong>
-  <%= @voice_check.response_result %>
-</p>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr>
+        <th class="info">お問い合わせ内容</th>
+        <th class="info">応対結果</th>
+      </tr>
+  <div class="field">
+        <th>  <%= @voice_check.contact_details %></th>
+      </div>
 
-<p>
-  <strong>評価者コメント</strong>
-  <%= @voice_check.evaluator_comment %>
-</p>
+      <div class="field">
+        <th>
+          <%= @voice_check.response_result %></th>
+      </div>
+    </table>
+  </div>
 
-<p>
-  <strong>ステータス</strong>
-  <%= @voice_check.status %>
-</p>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr>
+        <th class="info">ミス項目</th>
+        <th class="info">ポイント</th>
+        <th class="info">詳細</th>
+        <th class="info">評価</th>
+      </tr>
 
-<p>
-  <strong>顧客のミス</strong>
-  <%= @voice_check.customer_miss %>
-</p>
+      <div class="field">
+        <th>顧客の重大ミス</th>
+        <td>お客さまのご要望に応えること<br>マナーをもって対応すること</td>
+        <td>・誤回答、誤案内、誤誘導がない
+          <br>・著しいマナー不足がない<br>
+        </td>
+        <!--%= form.text_field :customer_miss, id: :voice_check_customer_miss %-->
+        <th>  <%= @voice_check.customer_miss %></th>
+      </div>
 
-<p>
-  <strong>ビジネスのミス</strong>
-  <%= @voice_check.business_miss %>
-</p>
+      <tr>
+        <div class="field">
+          <th>ビジネスの重大ミス</th>
+          <td>収益に貢献すること<br>不必要なコストを発生させないこと<br/>
+            <td>・不必要に対応時間を長引かせない
+              <br>・業務損失、呼減につながる行為がない<br></td>
 
-<p>
-  <strong>コンプライアンスのミス</strong>
-  <%= @voice_check.compliance_miss %>
-</p>
+            <!--%= form.text_field :business_miss, id: :voice_check_business_miss %-->
+            <th>
+                <%= @voice_check.business_miss %></th>
+          </div>
+        </tr>
+        <tr>
+          <div class="field">
+            <th>コンプライアンスの重大ミス</th>
+            <td>個人情報を適切に取り扱うこと</td>
+            <td>・本人性確認を正しく履行している</td>
+            <!--%= form.text_field :compliance_miss, id: :voice_check_compliance_miss %-->
+            <th>  <%= @voice_check.compliance_miss %></th>
+          </tr>
+        </div>
+      </table>
 
-<%= link_to '編集', edit_voice_check_path(@voice_check) %> |
-<%= link_to '一覧', voice_checks_path %>
+    <table class="table table-bordered">
+          <tr>
+            <th class="info">評価者コメント</th>
+          </tr>
+          <div class="field">
+            <th>
+                <%= @voice_check.evaluator_comment %></th>
+          </div>
+
+        </table>
+      </div>
+
+
+<br><button class="btn-active" type="submit"><%= link_to '編集', edit_voice_check_path(@voice_check) %></button></th>
+  <th>
+<button class="btn-active" type="submit"><%= link_to '一覧', voice_checks_path %></button></th>

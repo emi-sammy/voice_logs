@@ -1,17 +1,25 @@
-<p>
-  <strong>スタッフID:</strong>
-  <%= @staff.staff_num %>
-</p>
+<h2>staff Data：<%= @staff.staff_name %>さん</h2>
 
-<p>
-  <strong>スタッフ名:</strong>
-  <%= @staff.staff_name %>
-</p>
+<br><br>
+<div class="table-responsive">
+<table class="table table-bordered">
+  <thead>
+    <tr>
+          <th class="info">スタッフID</th>
+          <th class="info">スタッフ名</th>
+          <th class="info">評価サイクル</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>評価サイクル:</strong>
-  <%= @staff.evaluation_cycle %>
-</p>
+<th><%= @staff.staff_num %></th>
+<th><%= @staff.staff_name %></th>
+<th><%= @staff.evaluation_cycle %>ヶ月</th>
+</table>
 
-<%= link_to '編集', edit_staff_path(@staff) %> |
-<%= link_to 'Back', staffs_path %>
+</div>
+<br>
+
+<br>
+<button class="btn-active" type="submit"><%= link_to '編集', edit_staff_path(@staff) %></button></td>
+<button class="btn-active" type="submit"><%= link_to 'Back', staffs_path %></button></td><br>
+<br>

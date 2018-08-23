@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ボイスログ評価システム</title>
+    <title>ボイスログ評価管理システム</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -19,13 +19,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">ボイスログ評価システム</a>
+          <a class="navbar-brand" href="#">ボイスログ評価管理システム</a>
         </div>
 
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#">Home</a>
+            <li class="default">
+              <a href="#"></a>
             </li>
 
             <% if evaluator_signed_in? %>
@@ -34,10 +34,10 @@
               <li><%= link_to 'スタッフ新規登録', new_staff_path %></li>
               <li><%= link_to "スタッフ一覧", staffs_path %></li>
 
-              <ul class="nav navbar-nav navbar-right">
-                <li>
+              <ul class="nav navbar-nav mr-auto">
+                <li>　　　　　　　　　　
                   <span class="glyphicon glyphicon-log-out"><%= link_to "ログアウト", destroy_evaluator_session_path, method: :delete %></span></li>
-
+      <li>　　　　　</li>
 
                 <li>
                   <span>ようこそ
@@ -49,11 +49,11 @@
             <% else %>
 
               <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <span class="glyphicon glyphicon-user"><%= link_to "新規登録", new_evaluator_registration_path %>
+                <li>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</li>
+                  <li>  <span class="glyphicon glyphicon-user"><%= link_to "新規登録", new_evaluator_registration_path %>
                   </span>
                 </li>
-                <li>
+                <li>　　　　　　
                   <span class="glyphicon glyphicon-log-in"><%= link_to "ログイン", new_evaluator_session_path %>
                   </span>
                 </li>

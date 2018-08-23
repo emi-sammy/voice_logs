@@ -1,6 +1,6 @@
-<h1>スタッフ情報編集</h1>
+<h2>Staff Edit</h2>
 
 <%= render 'form', staff: @staff %>
 
-<%= link_to 'Show', @staff %> |
-<%= link_to 'Back', staffs_path %>
+<button class="btn-active" type="submit"><%= link_to '詳細', @staff %></button>
+<button class="btn-active" type="submit"><%= link_to 'back', staffs_path %></button>

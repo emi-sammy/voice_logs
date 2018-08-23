@@ -1,6 +1,6 @@
-<h1>スタッフ一覧</h1>
+<h2>Staff List</h2>
 
-
+  <td><button btn-lg class="btn-info btn-lg" type="submit"><%= link_to '新規登録', new_staff_path %></button></td>
 <div class="table-responsive">
 <table class="table table-hover">
   <thead>
@@ -17,12 +17,12 @@
 
     <% @staffs.each do |staff| %>
       <tr>
-        <td><%= staff.staff_num %></td>
-        <td><%= staff.staff_name %></td>
-        <td><%= staff.evaluation_cycle %>ヶ月</td>
-        <td><button class="btn-success" type="submit"><%= link_to '詳細', staff %></button></td>
-        <td><button class="btn-info" type="submit"><%= link_to '編集', edit_staff_path(staff) %></button></td>
-        <td><button class="btn-danger" type="submit"><%= link_to '削除', staff, method: :delete, data: { confirm: '削除しますか?' } %></button></td>
+          <th><%= staff.staff_num %></th>
+          <th><%= staff.staff_name %></th>
+          <th><%= staff.evaluation_cycle %>ヶ月</th>
+        <th><button class="btn-success" type="submit"><%= link_to '詳細', staff %></button></th>
+        <th><button class="btn-info" type="submit"><%= link_to '編集', edit_staff_path(staff) %></button></th>
+        <th><button class="btn-danger" type="submit"><%= link_to '削除', staff, method: :delete, data: { confirm: '削除しますか?' } %></button></th>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +30,3 @@
 </table>
 </div>
 <br>
-
-  <td><button btn-lg class="btn-info btn-lg" type="submit"><%= link_to 'スタッフ新規登録', new_staff_path %></button></td>
