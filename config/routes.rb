@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'voice_checks#index'
+  root 'voice_checks#top'
+
 
 
     resources :voice_checks
