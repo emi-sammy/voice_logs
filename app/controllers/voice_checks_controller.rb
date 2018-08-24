@@ -57,8 +57,6 @@ class VoiceChecksController < ApplicationController
   end
 
 
-
-
   private
 
     def set_voice_check

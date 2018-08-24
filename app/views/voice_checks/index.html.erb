@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>スタッフID</th>
-      <th>スタッフ名</th>
+
       <th>評価者</th>
       <th>通話開始月日</th>
       <th>ステータス</th>
@@ -21,7 +21,6 @@
     <% @voice_checks.each do |voice_check| %>
       <tr>
         <th><%= voice_check.staff_num %></th>
-        <td><%= Staff.find_by(staff_num: voice_check.staff_num).staff_name %></td>
 
         <th><%= voice_check.evaluator_name %></th>
         <th><%= voice_check.log_date %></th>
