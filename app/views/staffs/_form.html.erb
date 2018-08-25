@@ -1,45 +1,52 @@
 <%= form_with(model: staff, local: true) do |form| %>
-  <% if staff.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(staff.errors.count, "error") %> prohibited this staff from being saved:</h2>
+<% if staff.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(staff.errors.count, "error") %>
+      prohibited this staff from being saved:</h2>
 
-      <ul>
+    <ul>
       <% staff.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <br><br>
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <tr>
-            <th class="info">    <%= form.label :スタッフID %></th>
-            <th class="info">    <%= form.label :スタッフ名 %></th>
-            <th class="info">  <%= form.label :評価サイクル %></th>
-      </tr>
-
-              <tr>
-  <div class="field">
-
-  <th>  <%= form.text_field :staff_num, id: :staff_staff_num %></th>
+    </ul>
   </div>
+<% end %>
 
-  <div class="field">
+<br><br>
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <tr>
+      <th class="info">
+        <%= form.label :スタッフID %></th>
+      <th class="info">
+        <%= form.label :スタッフ名 %></th>
+      <th class="info">
+        <%= form.label :評価サイクル %></th>
+    </tr>
 
-  <th>  <%= form.text_field :staff_name, id: :staff_staff_name %></th>
+    <tr>
+      <div class="field">
+
+        <th>
+          <%= form.text_field :staff_num, id: :staff_staff_num %></th>
+      </div>
+
+      <div class="field">
+
+        <th>
+          <%= form.text_field :staff_name, id: :staff_staff_name %></th>
+      </div>
+
+      <div class="field">
+
+        <!--%= form.number_field :evaluation_cycle, id: :staff_evaluation_cycle %-->
+        <th><%= form.select :evaluation_cycle, [["1", "1"], ["3", "3"]],:include_blank => true %></th>
+      </div>
+
+    </table>
   </div>
-
-  <div class="field">
-
-  <th>  <%= form.number_field :evaluation_cycle, id: :staff_evaluation_cycle %></th>
-  </div>
-
-</table>
-</div>
 </tbody>
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<div class="actions">
+  <%= form.submit %>
+</div>
 <% end %>
