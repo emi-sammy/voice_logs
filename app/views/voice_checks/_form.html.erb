@@ -12,13 +12,8 @@
   </div>
 <% end %>
 
-
-
 <div class="table-responsive">
   <table class=table >
-
-
-
     <tr>
       <th class="info"><%= form.label :スタッフ番号 %></th>
       <th class="info"><%= form.label :通話開始月日 %></th>
@@ -28,9 +23,6 @@
     <div class="field" class="info">
       <th><%= form.text_field :staff_num, id: :voice_check_staff_num %></th>
     </div>
-
-
-
 
 
     <div class="field">
@@ -97,7 +89,7 @@
 
             <!--%= form.text_field :business_miss, id: :voice_check_business_miss %-->
             <th>
-              <%= form.select :business_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></th>
+              <%= form.select :business_miss, [["○", "○"], ["✕", "✕"]], :include_blank => true %></th>
           </div>
         </tr>
         <tr>

@@ -1,38 +1,49 @@
 <h2>Voice Check List</h2>
-  <td><button btn-lg class="btn-info btn-lg" type="submit"><%= link_to '新規作成', new_voice_check_path %></button></td>
+<td>
+  <button btn-lg="btn-lg" class="btn-info btn-lg" type="submit"><%= link_to '新規作成', new_voice_check_path %></button>
+</td>
 <div class="table-responsive">
-<table class="table table-hover">
+  <table class="table table-hover">
 
-  <thead>
-    <tr>
-      <th>スタッフID</th>
-
-      <th>評価者</th>
-      <th>通話開始月日</th>
-      <th>ステータス</th>
-      <th>顧客のミス</th>
-      <th>ビジネスミス</th>
-      <th>コンプラミス</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @voice_checks.each do |voice_check| %>
+    <thead>
       <tr>
-        <th><%= voice_check.staff_num %></th>
+        <th>スタッフID</th>
 
-        <th><%= voice_check.evaluator_name %></th>
-        <th><%= voice_check.log_date %></th>
-        <th><p class="text-danger"><%= voice_check.status %></p></th>
-        <th><%= voice_check.customer_miss %></th>
-        <th><%= voice_check.business_miss %></th>
-        <th><%= voice_check.compliance_miss %></th>
-        <th><button class="btn-success" type="submit"><%= link_to '詳細', voice_check %></button></th>
-        <th><button class="btn-info" type="submit"><%= link_to '編集', edit_voice_check_path(voice_check) %></button></th>
-        <th><button class="btn-danger" type="submit"><%= link_to '削除', voice_check, method: :delete, data: { confirm: '削除しますか?' } %></button></th>
+        <th>評価者</th>
+        <th>通話開始月日</th>
+        <th>ステータス</th>
+        <th>顧客のミス</th>
+        <th>ビジネスミス</th>
+        <th>コンプラミス</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @voice_checks.each do |voice_check| %>
+        <tr>
+          <th><%= voice_check.staff_num %></th>
+
+
+          <th><%= voice_check.evaluator_name %></th>
+          <th><%= voice_check.log_date %></th>
+
+          <th>
+            <p class="text-danger"><%= voice_check.status %></p>
+          </th>
+          <th><%= voice_check.customer_miss %></th>
+          <th><%= voice_check.business_miss %></th>
+          <th><%= voice_check.compliance_miss %></th>
+          <th>
+            <button class="btn-success" type="submit"><%= link_to '詳細', voice_check %></button>
+          </th>
+          <th>
+            <button class="btn-info" type="submit"><%= link_to '編集', edit_voice_check_path(voice_check) %></button>
+          </th>
+          <th>
+            <button class="btn-danger" type="submit"><%= link_to '削除', voice_check, method: :delete, data: { confirm: '削除しますか?' } %></button>
+          </th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>

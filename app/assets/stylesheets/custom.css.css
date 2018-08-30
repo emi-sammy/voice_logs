@@ -97,3 +97,11 @@ code {
 {
   background-color: #eeffbb;
 }
+/* Custom top CSS
+-------------------------------------------------- */
+.top{
+  position: relative;
+
+text-align: center;
+
+}

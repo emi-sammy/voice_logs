@@ -1,14 +1,19 @@
-<h2>ボイスログ評価管理システム</h2>
-
-
-ログインしてください
-
-
 <br><br>
-
-<button class="btn-active" type="submit"><span class="glyphicon glyphicon-log-in"><%= link_to "ログイン", new_evaluator_session_path %> </button>
-
-
-
-
-  <button class="btn-active" type="submit"><%= link_to "新規登録", new_evaluator_registration_path %>  </button>
+<div class="top">
+<div class="overlay">
+  <%= image_tag("top.jpg", :size => "1100x450", :alt => "top") %>
+</div>
+<br><br>
+<div class="col-xs-12">
+  <% if evaluator_signed_in? %>
+    <%=link_to '評価一覧', staffs_path, class: 'btn btn-default' %>
+  <% else %>
+    <button class="btn-active" type="submit">
+      <span class="glyphicon glyphicon-user">　<%= link_to "新規登録", new_evaluator_registration_path %>
+      </button>
+      <button class="btn-active" type="submit">
+        <span class="glyphicon glyphicon-log-in"><%= link_to " ログイン", new_evaluator_session_path %>
+        </button>
+      <% end %>
+  </div>
+</div>

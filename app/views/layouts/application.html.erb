@@ -25,56 +25,50 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="default">
-            </li>
 
-            <% if evaluator_signed_in? %>
+              <% if evaluator_signed_in? %>
               <li><%= link_to "評価一覧", voice_checks_path %></li>
               <li><%= link_to '新規作成', new_voice_check_path %></li>
               <li><%= link_to 'スタッフ新規登録', new_staff_path %></li>
               <li><%= link_to "スタッフ一覧", staffs_path %></li>
+            </li>
+          </ul>
 
-              <ul class="nav navbar-nav mr-auto">
-                <li>　　　　　　　　　　
-                  <span class="glyphicon glyphicon-log-out"><%= link_to "ログアウト", destroy_evaluator_session_path, method: :delete %></span></li>
-      <li>　　　　　</li>
+          <p class="navbar-text navbar-right">
+            <span class="glyphicon glyphicon-log-out">
+              <%= link_to "ログアウト", destroy_evaluator_session_path, method: :delete %></span></p>
 
-                <li>
-                  <span>ようこそ
-                    <strong><%= link_to current_evaluator.name, voice_checks_path(current_evaluator.id) %></strong>
-                    さん</span></li>
-              </ul>
+          <p class="navbar-text navbar-right">
+            <span>ようこそ
+              <strong><%= link_to current_evaluator.name, voice_checks_path(current_evaluator.id) %></strong>
+              さん</span></p>
 
+        <% else %>
 
-            <% else %>
+          <p class="navbar-text navbar-right">
+            <span class="glyphicon glyphicon-user">
+              <%= link_to "新規登録", new_evaluator_registration_path %></span></p>
 
-              <ul class="nav navbar-nav navbar-right">
-                <li>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</li>
-                  <li>  <span class="glyphicon glyphicon-user"><%= link_to "新規登録", new_evaluator_registration_path %>
-                  </span>
-                </li>
-                <li>　　　　　　
-                  <span class="glyphicon glyphicon-log-in"><%= link_to "ログイン", new_evaluator_session_path %>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          <% end %>
-      </ul>
+          <p class="navbar-text navbar-right">
+            <span class="glyphicon glyphicon-log-in">
+              <%= link_to "ログイン", new_evaluator_session_path %></span></p>
+
+        </div>
+      <% end %>
+
     </div>
   </nav>
   <!--/.nav-collapse -->
-</div>
-</nav>
-<br>
 
+  <br>
 
-<%= yield %>
+  <%= yield %>
 
-<footer class="footer">
-<div class="container">
-  <p class="text-muted">NTT comCHEO 2018
-  </p>
-</div>
-</footer>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">NTT comCHEO 2018 oikawa emi
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
