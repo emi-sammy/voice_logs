@@ -35,8 +35,7 @@
           </ul>
 
           <p class="navbar-text navbar-right">
-            <span class="glyphicon glyphicon-log-out">
-              <%= link_to "ログアウト", destroy_evaluator_session_path, method: :delete %></span></p>
+            <span><%= link_to "ログアウト", destroy_evaluator_session_path, method: :delete %></span></p>
 
           <p class="navbar-text navbar-right">
             <span>ようこそ
@@ -46,11 +45,10 @@
         <% else %>
 
           <p class="navbar-text navbar-right">
-            <span class="glyphicon glyphicon-user">
-              <%= link_to "新規登録", new_evaluator_registration_path %></span></p>
+            <span><%= link_to "新規登録", new_evaluator_registration_path %></span></p>
 
           <p class="navbar-text navbar-right">
-            <span class="glyphicon glyphicon-log-in">
+            <span>
               <%= link_to "ログイン", new_evaluator_session_path %></span></p>
 
         </div>

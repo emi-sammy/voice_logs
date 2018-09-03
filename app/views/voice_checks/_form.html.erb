@@ -3,7 +3,6 @@
   <div id="error_explanation">
     <h2><%= pluralize(voice_check.errors.count, "error") %>
       prohibited this voice_check from being saved:</h2>
-
     <ul>
       <% voice_check.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -11,6 +10,7 @@
     </ul>
   </div>
 <% end %>
+
 
 <div class="table-responsive">
   <table class=table >

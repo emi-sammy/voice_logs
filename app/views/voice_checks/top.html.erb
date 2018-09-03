@@ -9,10 +9,11 @@
     <%=link_to '評価一覧', staffs_path, class: 'btn btn-default' %>
   <% else %>
     <button class="btn-active" type="submit">
-      <span class="glyphicon glyphicon-user">　<%= link_to "新規登録", new_evaluator_registration_path %>
-      </button>
+      <span><%= link_to "新規登録", new_evaluator_registration_path %></span>
+      </button>　
+
       <button class="btn-active" type="submit">
-        <span class="glyphicon glyphicon-log-in"><%= link_to " ログイン", new_evaluator_session_path %>
+        <span><%= link_to " ログイン", new_evaluator_session_path %></span>
         </button>
       <% end %>
   </div>
