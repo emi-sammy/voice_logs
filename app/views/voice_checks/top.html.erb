@@ -1,12 +1,12 @@
-<br><br>
+<br>
 <div class="top">
 <div class="overlay">
   <%= image_tag("top.jpg", :size => "1100x450", :alt => "top") %>
 </div>
-<br><br>
+<br>
 <div class="col-xs-12">
   <% if evaluator_signed_in? %>
-    <%=link_to '評価一覧', staffs_path, class: 'btn btn-default' %>
+    <%=link_to '評価一覧', voice_checks_path, class: 'btn btn-default' %>
   <% else %>
     <button class="btn-active" type="submit">
       <span><%= link_to "新規登録", new_evaluator_registration_path %></span>

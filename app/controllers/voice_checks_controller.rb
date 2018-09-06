@@ -26,7 +26,7 @@ class VoiceChecksController < ApplicationController
 
     respond_to do |format|
       if @voice_check.save
-        format.html { redirect_to @voice_check, notice: 'Voice check was successfully created.' }
+        format.html { redirect_to @voice_check, notice: '登録しました' }
         format.json { render :show, status: :created, location: @voice_check }
       else
         format.html { render :new }
@@ -38,7 +38,7 @@ class VoiceChecksController < ApplicationController
   def update
     respond_to do |format|
       if @voice_check.update(voice_check_params)
-        format.html { redirect_to @voice_check, notice: 'Voice check was successfully updated.' }
+        format.html { redirect_to @voice_check, notice: '更新しました' }
         format.json { render :show, status: :ok, location: @voice_check }
       else
         format.html { render :edit }
@@ -51,7 +51,7 @@ class VoiceChecksController < ApplicationController
   def destroy
     @voice_check.destroy
     respond_to do |format|
-      format.html { redirect_to voice_checks_url, notice: 'Voice check was successfully destroyed.' }
+      format.html { redirect_to voice_checks_url, notice: '削除しました' }
       format.json { head :no_content }
     end
   end
