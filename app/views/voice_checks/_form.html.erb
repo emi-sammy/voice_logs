@@ -25,7 +25,7 @@
     </div>
 
 
-    <div class="field">
+     <div class="field">
       <th><%= form.date_field :log_date, id: :voice_check_log_date %></th>
       </div>
 
@@ -51,12 +51,12 @@
         <th class="info"><%= form.label :応対結果 %></th>
       </tr>
   <div class="field">
-        <th><%= form.text_area :contact_details, id: :voice_check_contact_details , :size=>"52"%></th>
+        <th><%= form.text_area :contact_details, id: :voice_check_contact_details %></th>
       </div>
 
       <div class="field">
         <th>
-          <%= form.text_area :response_result, id: :voice_check_response_result , :size=>"52"%></th>
+          <%= form.text_area :response_result, id: :voice_check_response_result %></th>
       </div>
     </table>
   </div>
@@ -111,7 +111,7 @@
           </tr>
           <div class="field">
             <th>
-              <%= form.text_area :evaluator_comment, id: :voice_check_evaluator_comment ,:size=>"50x5"%></th>
+              <%= form.text_area :evaluator_comment, id: :voice_check_evaluator_comment %></th>
           </div>
           <div class="actions">
         <th><%= form.submit %></th>
