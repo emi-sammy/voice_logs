@@ -10,7 +10,7 @@
         <th>スタッフID</th>
 
         <th>評価者</th>
-        <th>通話開始月日</th>
+        <th>通話開始日時</th>
         <th>ステータス</th>
         <th>顧客のミス</th>
         <th>ビジネスミス</th>
@@ -24,7 +24,14 @@
           <th><%= voice_check.staff_num %></th>
 
           <th><%= voice_check.evaluator_name %></th>
-          <th><%= voice_check.log_date %></th>
+
+          <th>
+            <% if voice_check.datetime.present? %>
+              <%= voice_check.datetime.strftime('%Y/%m/%d %R') %>
+            <% else %>
+              <%= nil%>
+            <% end %>
+          </th>
 
           <th>
             <p class="text-danger"><%= voice_check.status %></p>

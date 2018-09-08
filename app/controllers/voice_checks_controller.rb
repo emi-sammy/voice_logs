@@ -65,6 +65,6 @@ class VoiceChecksController < ApplicationController
 
 
     def voice_check_params
-      params.require(:voice_check).permit(:staff_num, :evaluator_id, :evaluator_name, :log_date, :log_time, :contact_details, :response_result, :evaluator_comment, :status, :customer_miss, :business_miss, :compliance_miss)
+      params.require(:voice_check).permit(:staff_num, :evaluator_id, :evaluator_name, :log_date, :log_time, :contact_details, :response_result, :evaluator_comment, :status, :customer_miss, :business_miss, :compliance_miss, :datetime, )
     end
 end

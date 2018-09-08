@@ -1,6 +1,5 @@
-<h1>Editing 編集 Check</h1>
+<h1>Editing  Check</h1>
+<button class="btn-active" type="submit"><%= link_to '詳細', @voice_check%></button>
+<button class="btn-active" type="submit"><%= link_to 'back', voice_checks_path %></button>
 
 <%= render 'form', voice_check: @voice_check %>
-
-<%= link_to 'Show', @voice_check %> |
-<%= link_to 'Back', voice_checks_path %>

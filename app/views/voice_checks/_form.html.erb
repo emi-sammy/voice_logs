@@ -16,7 +16,7 @@
   <table class=table >
     <tr>
       <th class="info"><%= form.label :スタッフID %></th>
-      <th class="info"><%= form.label :通話開始月日 %></th>
+      <th class="info"><%= form.label :通話開始日時 %></th>
       <th class="info"><%= form.label :評価者%></th>
       <th class="info"><%= form.label :ステータス %></th>
     </tr>
@@ -25,8 +25,9 @@
     </div>
 
 
-     <div class="field">
-      <th><%= form.date_field :log_date, id: :voice_check_log_date %></th>
+    <div class="field">
+      <th><%= form.datetime_select :datetime, id: :voice_check_datetime , :use_month_numbers => true %></th>
+
       </div>
 
       <div class="field">
