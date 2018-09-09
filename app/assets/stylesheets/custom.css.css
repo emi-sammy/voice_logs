@@ -113,6 +113,5 @@ select{
   height: 33px;
   font-size: 15px;
   border :1px solid #eee;
-  export PATH="$HOME/.rbenv/bin:$PATH" ;
 }
 
