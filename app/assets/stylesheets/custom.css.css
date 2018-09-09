@@ -3,11 +3,9 @@
 html {
   position: relative;
   min-height: 100%;
+
 }
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -15,16 +13,18 @@ body {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #add8e6;
+  padding-right: 15px;
+  padding-left: 15px;
+  text-align: center;
 }
+
 
 
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
-body > .container {
-  padding: 60px 15px 0;
-}
+
 .container .text-muted {
   margin: 20px 0;
 }
@@ -33,6 +33,7 @@ body > .container {
   padding-right: 15px;
   padding-left: 15px;
   text-align: center;
+
 }
 
 code {
@@ -41,6 +42,7 @@ code {
 
 .navbar {
   background-color: #add8e6;
+
 }
 
 
@@ -100,9 +102,8 @@ code {
 /* Custom top CSS
 -------------------------------------------------- */
 .top{
-  position: relative;
 
-text-align: center;
+  text-align: center;
 
 }
 
@@ -114,4 +115,3 @@ select{
   font-size: 15px;
   border :1px solid #eee;
 }
-
