@@ -31,7 +31,8 @@
       </div>
 
       <div class="field">
-        <th><%= form.select :evaluator_name, [["及川 恵美", "及川 恵美"], ["品質 花子", "品質 花子"], ["品質 太郎", "品質 花子"]] %></th>
+        <th><!--%= form.select :evaluator_name, [["及川 恵美", "及川 恵美"], ["品質 花子", "品質 花子"], ["品質 太郎", "品質 花子"]] %-->
+            <%= form.collection_select :evaluator_name, Evaluator.all, :name, :name %></th>
       </div>
 
       <div class="field">
@@ -78,7 +79,7 @@
           <br>・著しいマナー不足がない<br>
         </td>
         <!--%= form.text_field :customer_miss, id: :voice_check_customer_miss %-->
-        <th><%= form.select :customer_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></th>
+        <th><%= form.select :customer_miss, [["◯", "◯"], ["✕", "✕"]],:include_blank => true %></th>
       </div>
 
       <tr>
@@ -90,7 +91,7 @@
 
             <!--%= form.text_field :business_miss, id: :voice_check_business_miss %-->
             <th>
-              <%= form.select :business_miss, [["○", "○"], ["✕", "✕"]], :include_blank => true %></th>
+              <%= form.select :business_miss, [["◯", "◯"], ["✕", "✕"]], :include_blank => true %></th>
           </div>
         </tr>
         <tr>
@@ -99,7 +100,7 @@
             <td>個人情報を適切に取り扱うこと</td>
             <td>・本人性確認を正しく履行している</td>
             <!--%= form.text_field :compliance_miss, id: :voice_check_compliance_miss %-->
-            <th><%= form.select :compliance_miss, [["○", "○"], ["✕", "✕"]],:include_blank => true %></th>
+            <th><%= form.select :compliance_miss, [["◯", "◯"], ["✕", "✕"]],:include_blank => true %></th>
           </tr>
         </div>
       </table>
