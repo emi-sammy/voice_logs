@@ -6,18 +6,17 @@ body {
 }
 header.jumbotron {
     height: 600px;
-    background: url("top.jpg") center 0 no-repeat;
+    background: url("top1.jpg") center 0 no-repeat;
     background-size: cover;
-    width: 1380px;
     }
 h1.jumbotron-h1{
     padding-top:100px;
     overflow:hidden;
 }
-@media (max-width: 767px){
+@media (max-width: 680px){
 header.jumbotron {
     height: 410px;
-    background: url("top.jpg") center no-repeat;
+    background: url("top1.jpg") center no-repeat;
     background-size: cover;
 }
 }
