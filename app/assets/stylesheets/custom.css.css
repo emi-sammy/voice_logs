@@ -6,7 +6,7 @@ body {
 }
 header.jumbotron {
     height: 600px;
-    background: url("top1.jpg") center 0 no-repeat;
+    background: url(/images/top1.jpg) center 0 no-repeat;
     background-size: cover;
     }
 h1.jumbotron-h1{
@@ -16,7 +16,7 @@ h1.jumbotron-h1{
 @media (max-width: 680px){
 header.jumbotron {
     height: 410px;
-    background: url("top1.jpg") center no-repeat;
+    background: url(/images/top1.jpg)  center no-repeat;
     background-size: cover;
 }
 }
