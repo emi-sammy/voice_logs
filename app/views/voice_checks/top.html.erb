@@ -1,20 +1,12 @@
-<br>
-<div class="top">
-<div class="overlay">
-  <%= image_tag("top.jpg", :size => "980x430", :alt => "top") %>
-</div>
-<br>
-<div class="col-xs-12">
-  <% if evaluator_signed_in? %>
-    <%=link_to '評価一覧', voice_checks_path, class: 'btn btn-default' %>
-  <% else %>
-    <button class="btn-active" type="submit">
-      <span><%= link_to "新規登録", new_evaluator_registration_path %></span>
-      </button>　
-
-      <button class="btn-active" type="submit">
-        <span><%= link_to " ログイン", new_evaluator_session_path %></span>
-        </button>
-      <% end %>
+<header class="jumbotron text-center">
+  <div class="container">
+    <br>
+    <h1 class="jumbotron-h1">voice check</h1>
+    <% if evaluator_signed_in? %>
+      <p><%=link_to '評価一覧', voice_checks_path, class: 'btn-lg btn-default' %></p>
+    <% else %>
+      <p><%= link_to "新規登録", new_evaluator_registration_path, class: 'btn-lg btn-default' %></p>
+      <p><%= link_to " ログイン", new_evaluator_session_path, class: 'btn-lg btn-default' %></p>
+    <% end %>
   </div>
-</div>
+</header>

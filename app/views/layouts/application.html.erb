@@ -7,9 +7,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-
+    <meta name="viewport" content="width=device-width,initial-scale=1">
   </head>
 
   <body>
@@ -54,29 +52,27 @@
           <p class="navbar-text navbar-right">
             <span>
               <%= link_to "ログイン", new_evaluator_session_path %></span></p>
-
         </div>
       <% end %>
-
     </div>
   </nav>
   <!--/.nav-collapse -->
-  <br>
-
   <% if notice %>
-  <p class="alert alert-notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-error"><%= alert %></p>
-<% end %>
+    <p class="alert alert-notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-error"><%= alert %></p>
+  <% end %>
 
   <%= yield %>
 
   <footer class="footer">
     <div class="container">
-      <p class="text-muted">NTT comCHEO 2018 oikawa emi
+      <p class="text-muted">NTT ComCHEO 2018 oikawa emi
       </p>
     </div>
   </footer>
+
 </body>
+
 </html>

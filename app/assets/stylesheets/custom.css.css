@@ -1,9 +1,41 @@
+/* Custom top CSS
+-------------------------------------------------- */
+body {
+    min-height: 680px;
+    padding: 40px 0px;
+}
+header.jumbotron {
+    height: 600px;
+    background: url("top.jpg") center 0 no-repeat;
+    background-size: cover;
+    width: 1380px;
+    }
+h1.jumbotron-h1{
+    padding-top:100px;
+    overflow:hidden;
+}
+@media (max-width: 767px){
+header.jumbotron {
+    height: 410px;
+    background: url("top.jpg") center no-repeat;
+    background-size: cover;
+}
+}
+
+
+/* Custom select CSS
+-------------------------------------------------- */
+
+select{
+  height: 33px;
+  font-size: 15px;
+  border :1px solid #eee;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
-
 }
 
 .footer {
@@ -13,11 +45,9 @@ html {
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #add8e6;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 20px;
   text-align: center;
 }
-
 
 
 /* Custom page CSS
@@ -25,24 +55,10 @@ html {
 /* Not required for template or sticky footer method. */
 
 
-.container .text-muted {
-  margin: 20px 0;
-}
 
-.footer > .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  text-align: center;
-
-}
-
-code {
-  font-size: 80%;
-}
 
 .navbar {
   background-color: #add8e6;
-
 }
 
 
@@ -98,20 +114,4 @@ code {
 .table > tfoot > tr > td.warning
 {
   background-color: #eeffbb;
-}
-/* Custom top CSS
--------------------------------------------------- */
-.top{
-
-  text-align: center;
-
-}
-
-/* Custom select CSS
--------------------------------------------------- */
-
-select{
-  height: 33px;
-  font-size: 15px;
-  border :1px solid #eee;
 }
