@@ -1,0 +1,22 @@
+/* Custom top CSS
+-------------------------------------------------- */
+body {
+    min-height: 680px;
+    padding: 40px 0px;
+}
+header.jumbotron {
+    height: 600px;
+    background: image-url("top.png") center 0 no-repeat;
+    background-size: cover;
+    }
+h1.jumbotron-h1{
+    padding-top:100px;
+    overflow:hidden;
+}
+@media (max-width: 680px){
+header.jumbotron {
+    height: 410px;
+    background: image-url("top.png") center 0 no-repeat;
+    background-size: cover;
+}
+}
