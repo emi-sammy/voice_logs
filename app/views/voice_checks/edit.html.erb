@@ -1,5 +1,4 @@
-<h1>Editing  Check</h1>
-<button class="btn-active" type="submit"><%= link_to '詳細', @voice_check%></button>
-<button class="btn-active" type="submit"><%= link_to 'back', voice_checks_path %></button>
-
+<br>
 <%= render 'form', voice_check: @voice_check %>
+<button class="btn-active" type="submit"><%= link_to '詳細', @voice_check%></button>
+<button class="btn-active" type="submit"><%= link_to '一覧', voice_checks_path %></button>
