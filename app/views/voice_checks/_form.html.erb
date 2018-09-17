@@ -21,7 +21,8 @@
       <th class="info"><%= form.label :ステータス %></th>
     </tr>
     <div class="field" class="info">
-      <th><%= form.text_field :staff_num, id: :voice_check_staff_num %></th>
+      <!--%= form.text_field :staff_num, id: :voice_check_staff_num %-->
+      <th><%= form.collection_select :staff_num, Staff.all.order(staff_num: :asc), :staff_num, :staff_num %></th>
     </div>
 
 
