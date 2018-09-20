@@ -9,7 +9,6 @@ class VoiceChecksController < ApplicationController
 
 
   def show
-
   end
 
   def new
@@ -27,10 +26,8 @@ class VoiceChecksController < ApplicationController
     respond_to do |format|
       if @voice_check.save
         format.html { redirect_to @voice_check, notice: '登録しました' }
-        format.json { render :show, status: :created, location: @voice_check }
       else
         format.html { render :new }
-        format.json { render json: @voice_check.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -39,10 +36,8 @@ class VoiceChecksController < ApplicationController
     respond_to do |format|
       if @voice_check.update(voice_check_params)
         format.html { redirect_to @voice_check, notice: '更新しました' }
-        format.json { render :show, status: :ok, location: @voice_check }
       else
         format.html { render :edit }
-        format.json { render json: @voice_check.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -52,7 +47,6 @@ class VoiceChecksController < ApplicationController
     @voice_check.destroy
     respond_to do |format|
       format.html { redirect_to voice_checks_url, notice: '削除しました' }
-      format.json { head :no_content }
     end
   end
 
