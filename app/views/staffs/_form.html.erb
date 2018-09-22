@@ -14,10 +14,14 @@
 
 <br><br>
 <div class="table-responsive">
-  <table class="table table-bordered">
+  <table class="table">
     <tr>
       <th class="info">
         <%= form.label :スタッフID %></th>
+      <th class="info">
+        <%= form.label :地域 %></th>
+      <th class="info">
+        <%= form.label :リリース期 %></th>
       <th class="info">
         <%= form.label :スタッフ名 %></th>
       <th class="info">
@@ -26,9 +30,17 @@
 
     <tr>
       <div class="field">
-
         <th>
           <%= form.text_field :staff_num, id: :staff_staff_num %></th>
+      </div>
+
+      <div class="field">
+        <th><%= form.select :staff_area, [["北海道", "北海道"], ["東北", "東北"], ["関東", "関東"], ["東海", "東海"], ["甲信越", "甲信越"], ["関西", "関西"], ["中国", "中国"], ["四国", "四国"], ["九州", "九州"], ["沖縄", "沖縄"]],:include_blank => true %></th>
+      </div>
+
+      <div class="field">
+        <th>
+          <%= form.text_field :release_time, id: :staff_release_time %>期</th>
       </div>
 
       <div class="field">
@@ -46,6 +58,7 @@
     </table>
   </div>
 </tbody>
+
 <div class="actions">
   <%= form.submit %>
 </div>

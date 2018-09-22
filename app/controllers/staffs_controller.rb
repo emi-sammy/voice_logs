@@ -42,7 +42,6 @@ class StaffsController < ApplicationController
     @staff.destroy
     respond_to do |format|
       format.html { redirect_to staffs_url, notice: '削除しました' }
-      format.json { head :no_content }
     end
   end
 
@@ -52,6 +51,6 @@ class StaffsController < ApplicationController
     end
 
     def staff_params
-      params.require(:staff).permit(:staff_num, :staff_name, :evaluation_cycle)
+      params.require(:staff).permit(:staff_num, :staff_name, :evaluation_cycle,:staff_area, :release_time)
     end
 end

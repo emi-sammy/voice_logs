@@ -22,7 +22,7 @@
     </tr>
     <div class="field" class="info">
       <!--%= form.text_field :staff_num, id: :voice_check_staff_num %-->
-      <th><%= form.collection_select :staff_num, Staff.all.order(staff_num: :asc), :staff_num, :staff_num %></th>
+      <th><%= form.collection_select :staff_num, Staff.all.order(staff_num: :asc), :staff_num, :staff_num ,:include_blank => true%></th>
     </div>
 
 
@@ -33,7 +33,7 @@
 
       <div class="field">
         <th><!--%= form.select :evaluator_name, [["及川 恵美", "及川 恵美"], ["品質 花子", "品質 花子"], ["品質 太郎", "品質 花子"]] %-->
-            <%= form.collection_select :evaluator_name, Evaluator.all, :name, :name %></th>
+            <%= form.collection_select :evaluator_name, Evaluator.all, :name, :name ,:include_blank => true%></th>
       </div>
 
       <div class="field">

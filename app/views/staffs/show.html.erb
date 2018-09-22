@@ -1,4 +1,4 @@
-<h2>Staff Data：<%= @staff.staff_name %>さん</h2>
+<h2> スタッフ情報 ： <%= @staff.staff_name %>さん</h2>
 
 <br><br>
 <div class="table-responsive">
@@ -6,12 +6,16 @@
   <thead>
     <tr>
           <th class="info">スタッフID</th>
+          <th class="info">地域 </th>
+          <th class="info">リリース期 </th>
           <th class="info">スタッフ名</th>
           <th class="info">評価サイクル</th>
     </tr>
   </thead>
 
 <th><%= @staff.staff_num %></th>
+<th><%= @staff.staff_area %></th>
+<th><%= @staff.release_time %>期</th>
 <th><%= @staff.staff_name %></th>
 <th><%= @staff.evaluation_cycle %>ヶ月</th>
 </table>
