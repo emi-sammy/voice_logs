@@ -12,7 +12,7 @@
 
 \*Ruby 2.3.0  
 \*Rails 5.1.6  
-\*PostgreSQL 10.4 
+\*PostgreSQL 10.4  
 \*Bootstrap 4  
 
 ## Function
